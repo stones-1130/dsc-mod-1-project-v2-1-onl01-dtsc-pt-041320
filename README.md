@@ -9,13 +9,23 @@ Please fill out:
 * Blog post URL: https://stones-1130.github.io/mod_1_final_project_approach
 
 
+# Intro
+
+**Assignment:** 
+
+*To help Microsoft better understand the movie industry and conduct data analysis that explores what types of films are currently doing the best at the box office.* 
+
+*Translate those findings into actionable insights that the Microsoft CEO can use when deciding what types of films he should be creating.* 
+
+**My approach:**
+
 For this project, I focused primarily on analyzing financial data from movie databases such as IMDb, Rotten Tomatoes, and TMDb. 
 
 I broke this project down into two phases, going from big to small. 
 
-Phase 1- Analyze movie revenue (domestic and foreign) from the macro perspective to get a better sense of scale. 
+**Phase 1-** Analyze movie revenue (domestic and foreign) from the macro perspective to get a better sense of scale. 
 
-Macro Questions: 
+**Macro Questions:** 
 1. What are the highest grossing movies of all time, and how much did they make? 
 2. What are the highest grossing movies from the last ten years (2010-2020)? 
 3. Did films make more money in the U.S. or in foreign markets?
@@ -23,15 +33,15 @@ Macro Questions:
 5. What's the average return on investment for a successful film?
 6. What's the average production budget for the top 150 most successful (by worldwide gross) movies of the last ten years?
 
-Phase 2- Analyze commonalities in the data for the top performers of the last 10 years.
+**Phase 2-** Analyze commonalities in the data for the top performers of the last 10 years.
 
-Micro Questions:
+**Micro Questions:**
 1. Which movies had the highest return on investment from the last 10 years (2010-2020)? 
 2. Which production companies were the most successful during the past 10 years?
-3. Which production company had the ROI?
+3. Which production company had the highest average ROI?
 4. What parental guidance ratings were associated with the highest earnings?
 
-## Getting started
+# Getting started
 
 1. Import packages and data
 
@@ -41,10 +51,16 @@ Micro Questions:
 %ls
 ```
 
-    CONTRIBUTING.md             module1_project_rubric.pdf
-    LICENSE.md                  student.ipynb
-    README.md                   [34mzippedData[m[m/
-    awesome.gif
+    CONTRIBUTING.md             output_53_0.png
+    LICENSE.md                  output_55_0.png
+    Mod_1 presentation.pdf      output_58_0.png
+    README.md                   output_61_0.png
+    awesome.gif                 output_65_0.png
+    module1_project_rubric.pdf  output_80_0.png
+    output_25_0.png             output_88_0.png
+    output_45_0.png             output_97_0.png
+    output_47_0.png             student.ipynb
+    output_52_0.png             [34mzippedData[m[m/
 
 
 
@@ -1955,7 +1971,7 @@ df_8['gross_profit'].astype("int", copy=False)
 
 ```python
 #LOOK FOR DUPLICATES. 
-df_8_dups = df_8[df_8.duplicated('movie', keep=False)]
+df_8_dups = df_8[df_8.duplicated('movie', keep=False)].sort_values('movie')
 
 df_8_dups
 ```
@@ -1992,114 +2008,114 @@ df_8_dups
   </thead>
   <tbody>
     <tr>
-      <td>26</td>
-      <td>27</td>
-      <td>May 4, 2012</td>
-      <td>The Avengers</td>
-      <td>225000000</td>
-      <td>623279547</td>
-      <td>1517935897</td>
-      <td>1292935897</td>
+      <td>4270</td>
+      <td>71</td>
+      <td>Dec 23, 1954</td>
+      <td>20,000 Leagues Under the Sea</td>
+      <td>5000000</td>
+      <td>28200000</td>
+      <td>28200000</td>
+      <td>23200000</td>
     </tr>
     <tr>
-      <td>38</td>
-      <td>39</td>
-      <td>May 14, 2010</td>
-      <td>Robin Hood</td>
-      <td>210000000</td>
-      <td>105487148</td>
-      <td>322459006</td>
-      <td>112459006</td>
-    </tr>
-    <tr>
-      <td>39</td>
-      <td>40</td>
-      <td>Dec 14, 2005</td>
-      <td>King Kong</td>
-      <td>207000000</td>
-      <td>218080025</td>
-      <td>550517357</td>
-      <td>343517357</td>
-    </tr>
-    <tr>
-      <td>50</td>
-      <td>51</td>
-      <td>Mar 5, 2010</td>
-      <td>Alice in Wonderland</td>
-      <td>200000000</td>
-      <td>334191110</td>
-      <td>1025491110</td>
-      <td>825491110</td>
-    </tr>
-    <tr>
-      <td>64</td>
-      <td>65</td>
-      <td>Jun 9, 2017</td>
-      <td>The Mummy</td>
-      <td>195000000</td>
-      <td>80101125</td>
-      <td>409953905</td>
-      <td>214953905</td>
-    </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>5668</td>
-      <td>69</td>
-      <td>Nov 16, 1942</td>
-      <td>Cat People</td>
-      <td>134000</td>
-      <td>4000000</td>
+      <td>5614</td>
+      <td>15</td>
+      <td>Dec 24, 1916</td>
+      <td>20,000 Leagues Under the Sea</td>
+      <td>200000</td>
       <td>8000000</td>
-      <td>7866000</td>
+      <td>8000000</td>
+      <td>7800000</td>
     </tr>
     <tr>
-      <td>5676</td>
-      <td>77</td>
-      <td>Oct 1, 1968</td>
-      <td>Night of the Living Dead</td>
-      <td>114000</td>
-      <td>12087064</td>
-      <td>30087064</td>
-      <td>29973064</td>
+      <td>1648</td>
+      <td>49</td>
+      <td>Apr 30, 2010</td>
+      <td>A Nightmare on Elm Street</td>
+      <td>35000000</td>
+      <td>63075011</td>
+      <td>117729621</td>
+      <td>82729621</td>
     </tr>
     <tr>
-      <td>5677</td>
-      <td>78</td>
-      <td>Feb 8, 1915</td>
-      <td>The Birth of a Nation</td>
-      <td>110000</td>
-      <td>10000000</td>
-      <td>11000000</td>
-      <td>10890000</td>
+      <td>5016</td>
+      <td>17</td>
+      <td>Nov 9, 1984</td>
+      <td>A Nightmare on Elm Street</td>
+      <td>1800000</td>
+      <td>25504513</td>
+      <td>25504513</td>
+      <td>23704513</td>
     </tr>
     <tr>
-      <td>5699</td>
-      <td>100</td>
-      <td>Aug 30, 1972</td>
-      <td>The Last House on the Left</td>
-      <td>87000</td>
-      <td>3100000</td>
-      <td>3100000</td>
-      <td>3013000</td>
+      <td>2032</td>
+      <td>33</td>
+      <td>Nov 11, 1992</td>
+      <td>Aladdin</td>
+      <td>28000000</td>
+      <td>217350219</td>
+      <td>504050219</td>
+      <td>476050219</td>
     </tr>
     <tr>
-      <td>5718</td>
-      <td>19</td>
-      <td>Feb 22, 2008</td>
-      <td>The Signal</td>
-      <td>50000</td>
-      <td>251150</td>
-      <td>406299</td>
-      <td>356299</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>3403</td>
+      <td>4</td>
+      <td>Apr 21, 2017</td>
+      <td>Unforgettable</td>
+      <td>12000000</td>
+      <td>11368012</td>
+      <td>16221211</td>
+      <td>4221211</td>
+    </tr>
+    <tr>
+      <td>1420</td>
+      <td>21</td>
+      <td>Feb 18, 2011</td>
+      <td>Unknown</td>
+      <td>40000000</td>
+      <td>63686397</td>
+      <td>136123083</td>
+      <td>96123083</td>
+    </tr>
+    <tr>
+      <td>4583</td>
+      <td>84</td>
+      <td>Nov 3, 2006</td>
+      <td>Unknown</td>
+      <td>3700000</td>
+      <td>26403</td>
+      <td>3355048</td>
+      <td>-344952</td>
+    </tr>
+    <tr>
+      <td>2313</td>
+      <td>14</td>
+      <td>Sep 16, 2005</td>
+      <td>Venom</td>
+      <td>25000000</td>
+      <td>881745</td>
+      <td>881745</td>
+      <td>-24118255</td>
+    </tr>
+    <tr>
+      <td>302</td>
+      <td>3</td>
+      <td>Oct 5, 2018</td>
+      <td>Venom</td>
+      <td>116000000</td>
+      <td>213511408</td>
+      <td>853628605</td>
+      <td>737628605</td>
     </tr>
   </tbody>
 </table>
@@ -2111,9 +2127,53 @@ df_8_dups
 
 ```python
 #REMOVE DUPLICATES
-df_8.drop_duplicates(subset="movie", keep=False, inplace=True)
+df_8.drop_duplicates(subset="movie", keep='first', inplace=True)
 
 ```
+
+
+```python
+df_8_dups = df_8[df_8.duplicated('movie', keep=False)]
+
+df_8_dups
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>release_date</th>
+      <th>movie</th>
+      <th>production_budget</th>
+      <th>domestic_gross</th>
+      <th>worldwide_gross</th>
+      <th>gross_profit</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+
+
 
 
 ```python
@@ -2265,7 +2325,7 @@ df_8
     </tr>
   </tbody>
 </table>
-<p>5617 rows × 7 columns</p>
+<p>5698 rows × 7 columns</p>
 </div>
 
 
@@ -2320,7 +2380,7 @@ ax.set_title('Top 20 all-time highest grossing movies (NOT ADJUSTED FOR INFLATIO
 ```
 
 
-![png](output_25_0.png)
+![png](output_27_0.png)
 
 
 ### Now let's filter to only display the movies from the last 10 years (2010-2020)
@@ -2500,7 +2560,7 @@ df_8
     </tr>
   </tbody>
 </table>
-<p>5617 rows × 9 columns</p>
+<p>5698 rows × 9 columns</p>
 </div>
 
 
@@ -2595,16 +2655,16 @@ df_8
       <td>2015</td>
     </tr>
     <tr>
-      <td>260</td>
-      <td>61</td>
-      <td>Jul 15, 2011</td>
-      <td>Harry Potter and the Deathly Hallows: Part II</td>
-      <td>125000000</td>
-      <td>381193157</td>
-      <td>1341693157</td>
-      <td>1216693157</td>
-      <td>Jul 15</td>
-      <td>2011</td>
+      <td>26</td>
+      <td>27</td>
+      <td>May 4, 2012</td>
+      <td>The Avengers</td>
+      <td>225000000</td>
+      <td>623279547</td>
+      <td>1517935897</td>
+      <td>1292935897</td>
+      <td>May 4</td>
+      <td>2012</td>
     </tr>
     <tr>
       <td>...</td>
@@ -2619,16 +2679,16 @@ df_8
       <td>...</td>
     </tr>
     <tr>
-      <td>479</td>
-      <td>80</td>
-      <td>Dec 13, 2017</td>
-      <td>Bright</td>
+      <td>480</td>
+      <td>81</td>
+      <td>Dec 31, 2019</td>
+      <td>Army of the Dead</td>
       <td>90000000</td>
       <td>0</td>
       <td>0</td>
       <td>-90000000</td>
-      <td>Dec 13</td>
-      <td>2017</td>
+      <td>Dec 31</td>
+      <td>2019</td>
     </tr>
     <tr>
       <td>341</td>
@@ -2680,7 +2740,7 @@ df_8
     </tr>
   </tbody>
 </table>
-<p>1870 rows × 9 columns</p>
+<p>1902 rows × 9 columns</p>
 </div>
 
 
@@ -2788,6 +2848,19 @@ df_8.head(20)
       <td>599.327786</td>
     </tr>
     <tr>
+      <td>26</td>
+      <td>27</td>
+      <td>May 4, 2012</td>
+      <td>The Avengers</td>
+      <td>225000000</td>
+      <td>623279547</td>
+      <td>1517935897</td>
+      <td>1292935897</td>
+      <td>May 4</td>
+      <td>2012</td>
+      <td>474.638176</td>
+    </tr>
+    <tr>
       <td>260</td>
       <td>61</td>
       <td>Jul 15, 2011</td>
@@ -2838,6 +2911,19 @@ df_8.head(20)
       <td>Nov 22</td>
       <td>2013</td>
       <td>648.313273</td>
+    </tr>
+    <tr>
+      <td>134</td>
+      <td>35</td>
+      <td>Mar 17, 2017</td>
+      <td>Beauty and the Beast</td>
+      <td>160000000</td>
+      <td>504014165</td>
+      <td>1259199706</td>
+      <td>1099199706</td>
+      <td>Mar 17</td>
+      <td>2017</td>
+      <td>586.999816</td>
     </tr>
     <tr>
       <td>672</td>
@@ -2969,32 +3055,6 @@ df_8.head(20)
       <td>2011</td>
       <td>376.302843</td>
     </tr>
-    <tr>
-      <td>51</td>
-      <td>52</td>
-      <td>Nov 8, 2012</td>
-      <td>Skyfall</td>
-      <td>200000000</td>
-      <td>304360277</td>
-      <td>1110526981</td>
-      <td>910526981</td>
-      <td>Nov 8</td>
-      <td>2012</td>
-      <td>355.263490</td>
-    </tr>
-    <tr>
-      <td>621</td>
-      <td>22</td>
-      <td>Jul 3, 2013</td>
-      <td>Despicable Me 2</td>
-      <td>76000000</td>
-      <td>368065385</td>
-      <td>975216835</td>
-      <td>899216835</td>
-      <td>Jul 3</td>
-      <td>2013</td>
-      <td>1083.180046</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -3094,6 +3154,7 @@ df_9.head()
 
 #REMOVE DUPLICATES
 df_9.drop_duplicates("title", keep=False, inplace=True)
+
 df_9
 ```
 
@@ -3624,16 +3685,16 @@ display(df_finance.head(5), df_finance.shape)
     </tr>
     <tr>
       <td>4</td>
-      <td>61</td>
-      <td>Jul 15, 2011</td>
-      <td>Harry Potter and the Deathly Hallows: Part II</td>
-      <td>125000000</td>
-      <td>381193157</td>
-      <td>1341693157</td>
-      <td>1216693157</td>
-      <td>Jul 15</td>
-      <td>2011</td>
-      <td>873.354526</td>
+      <td>27</td>
+      <td>May 4, 2012</td>
+      <td>The Avengers</td>
+      <td>225000000</td>
+      <td>623279547</td>
+      <td>1517935897</td>
+      <td>1292935897</td>
+      <td>May 4</td>
+      <td>2012</td>
+      <td>474.638176</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -3645,7 +3706,7 @@ display(df_finance.head(5), df_finance.shape)
 
 
 
-    (1870, 14)
+    (1902, 14)
 
 
 
@@ -3747,14 +3808,14 @@ df_finance.head()
     </tr>
     <tr>
       <td>4</td>
-      <td>Jul 15, 2011</td>
-      <td>Harry Potter and the Deathly Hallows: Part II</td>
-      <td>125000000</td>
-      <td>381193157</td>
-      <td>1341693157</td>
-      <td>1216693157</td>
-      <td>2011</td>
-      <td>873.354526</td>
+      <td>May 4, 2012</td>
+      <td>The Avengers</td>
+      <td>225000000</td>
+      <td>623279547</td>
+      <td>1517935897</td>
+      <td>1292935897</td>
+      <td>2012</td>
+      <td>474.638176</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -3807,7 +3868,6 @@ df_finance.head()
       <th>gross_profit_percent</th>
       <th>studio</th>
       <th>foreign_gross</th>
-      <th>year_movie_released</th>
     </tr>
   </thead>
   <tbody>
@@ -3821,9 +3881,8 @@ df_finance.head()
       <td>1748134200</td>
       <td>2018</td>
       <td>482.711400</td>
-      <td>Disney</td>
+      <td>BV</td>
       <td>1369318718</td>
-      <td>Avengers: Infinity War - 2018</td>
     </tr>
     <tr>
       <td>1</td>
@@ -3837,7 +3896,6 @@ df_finance.head()
       <td>471.016739</td>
       <td>NaN</td>
       <td>1116648995</td>
-      <td>Star Wars Ep. VII: The Force Awakens - 2015</td>
     </tr>
     <tr>
       <td>2</td>
@@ -3849,9 +3907,8 @@ df_finance.head()
       <td>1433854864</td>
       <td>2015</td>
       <td>566.909239</td>
-      <td>Univ.</td>
+      <td>Uni.</td>
       <td>996584239</td>
-      <td>Jurassic World - 2015</td>
     </tr>
     <tr>
       <td>3</td>
@@ -3863,23 +3920,21 @@ df_finance.head()
       <td>1328722794</td>
       <td>2015</td>
       <td>599.327786</td>
-      <td>Univ.</td>
+      <td>Uni.</td>
       <td>1165715774</td>
-      <td>Furious 7 - 2015</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Jul 15, 2011</td>
-      <td>Harry Potter and the Deathly Hallows: Part II</td>
-      <td>125000000</td>
-      <td>381193157</td>
-      <td>1341693157</td>
-      <td>1216693157</td>
-      <td>2011</td>
-      <td>873.354526</td>
+      <td>May 4, 2012</td>
+      <td>The Avengers</td>
+      <td>225000000</td>
+      <td>623279547</td>
+      <td>1517935897</td>
+      <td>1292935897</td>
+      <td>2012</td>
+      <td>474.638176</td>
       <td>NaN</td>
-      <td>960500000</td>
-      <td>Harry Potter and the Deathly Hallows: Part II ...</td>
+      <td>894656350</td>
     </tr>
   </tbody>
 </table>
@@ -3940,7 +3995,7 @@ df_finance.head()
       <td>1748134200</td>
       <td>2018</td>
       <td>482.711400</td>
-      <td>Disney</td>
+      <td>BV</td>
       <td>1369318718</td>
       <td>Avengers: Infinity War - 2018</td>
     </tr>
@@ -3968,7 +4023,7 @@ df_finance.head()
       <td>1433854864</td>
       <td>2015</td>
       <td>566.909239</td>
-      <td>Univ.</td>
+      <td>Uni.</td>
       <td>996584239</td>
       <td>Jurassic World - 2015</td>
     </tr>
@@ -3982,23 +4037,23 @@ df_finance.head()
       <td>1328722794</td>
       <td>2015</td>
       <td>599.327786</td>
-      <td>Univ.</td>
+      <td>Uni.</td>
       <td>1165715774</td>
       <td>Furious 7 - 2015</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Jul 15, 2011</td>
-      <td>Harry Potter and the Deathly Hallows: Part II</td>
-      <td>125000000</td>
-      <td>381193157</td>
-      <td>1341693157</td>
-      <td>1216693157</td>
-      <td>2011</td>
-      <td>873.354526</td>
+      <td>May 4, 2012</td>
+      <td>The Avengers</td>
+      <td>225000000</td>
+      <td>623279547</td>
+      <td>1517935897</td>
+      <td>1292935897</td>
+      <td>2012</td>
+      <td>474.638176</td>
       <td>NaN</td>
-      <td>960500000</td>
-      <td>Harry Potter and the Deathly Hallows: Part II ...</td>
+      <td>894656350</td>
+      <td>The Avengers - 2012</td>
     </tr>
   </tbody>
 </table>
@@ -4059,7 +4114,7 @@ df_gp_20.head()
       <td>1748134200</td>
       <td>2018</td>
       <td>482.711400</td>
-      <td>Disney</td>
+      <td>BV</td>
       <td>1369318718</td>
       <td>Avengers: Infinity War - 2018</td>
     </tr>
@@ -4087,7 +4142,7 @@ df_gp_20.head()
       <td>1433854864</td>
       <td>2015</td>
       <td>566.909239</td>
-      <td>Univ.</td>
+      <td>Uni.</td>
       <td>996584239</td>
       <td>Jurassic World - 2015</td>
     </tr>
@@ -4101,23 +4156,23 @@ df_gp_20.head()
       <td>1328722794</td>
       <td>2015</td>
       <td>599.327786</td>
-      <td>Univ.</td>
+      <td>Uni.</td>
       <td>1165715774</td>
       <td>Furious 7 - 2015</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Jul 15, 2011</td>
-      <td>Harry Potter and the Deathly Hallows: Part II</td>
-      <td>125000000</td>
-      <td>381193157</td>
-      <td>1341693157</td>
-      <td>1216693157</td>
-      <td>2011</td>
-      <td>873.354526</td>
+      <td>May 4, 2012</td>
+      <td>The Avengers</td>
+      <td>225000000</td>
+      <td>623279547</td>
+      <td>1517935897</td>
+      <td>1292935897</td>
+      <td>2012</td>
+      <td>474.638176</td>
       <td>NaN</td>
-      <td>960500000</td>
-      <td>Harry Potter and the Deathly Hallows: Part II ...</td>
+      <td>894656350</td>
+      <td>The Avengers - 2012</td>
     </tr>
   </tbody>
 </table>
@@ -4178,7 +4233,16 @@ show_values_on_bars(ax, "h", 0.3)
 ```
 
 
-![png](output_45_0.png)
+![png](output_47_0.png)
+
+
+### **Highlight:** 
+
+90% of the top 20 grossing movies are part of an existing movie franchise or sequel
+
+### **Recommendations:** 
+
+Invest in building a franchise. Consider sequel potential when selecting franchise
 
 
 ## Macro Question #3: Did films make more money in the U.S. or in foreign markets?
@@ -4201,7 +4265,7 @@ ax.set_title('Domestic Gross vs. Total Gross Profit', fontsize=25);
 ```
 
 
-![png](output_47_0.png)
+![png](output_50_0.png)
 
 
 
@@ -4213,13 +4277,13 @@ df_finance['domestic_gross_x'].describe()
 
 
 
-    count    1.870000e+03
-    mean     4.415382e+07
-    std      8.006334e+07
+    count    1.902000e+03
+    mean     4.543765e+07
+    std      8.210192e+07
     min      0.000000e+00
-    25%      3.773200e+04
-    50%      1.280606e+07
-    75%      5.326285e+07
+    25%      4.661500e+04
+    50%      1.370321e+07
+    75%      5.441734e+07
     max      9.366622e+08
     Name: domestic_gross_x, dtype: float64
 
@@ -4233,13 +4297,13 @@ df_finance['foreign_gross'].describe()
 
 
 
-    count    1.870000e+03
-    mean     6.837995e+07
-    std      1.442864e+08
+    count    1.902000e+03
+    mean     7.052655e+07
+    std      1.470642e+08
     min      0.000000e+00
-    25%      9.691750e+04
-    50%      1.026713e+07
-    75%      5.970208e+07
+    25%      1.167972e+05
+    50%      1.061190e+07
+    75%      6.247493e+07
     max      1.369319e+09
     Name: foreign_gross, dtype: float64
 
@@ -4254,11 +4318,11 @@ display(foreign_m, dom_m)
 ```
 
 
-    68379950.46951872
+    70526553.40746583
 
 
 
-    44153822.08074866
+    45437651.82176656
 
 
 
@@ -4314,7 +4378,7 @@ df_finance.head()
       <td>1748134200</td>
       <td>2018</td>
       <td>482.711400</td>
-      <td>Disney</td>
+      <td>BV</td>
       <td>1369318718</td>
       <td>Avengers: Infinity War - 2018</td>
     </tr>
@@ -4342,7 +4406,7 @@ df_finance.head()
       <td>1433854864</td>
       <td>2015</td>
       <td>566.909239</td>
-      <td>Univ.</td>
+      <td>Uni.</td>
       <td>996584239</td>
       <td>Jurassic World - 2015</td>
     </tr>
@@ -4356,23 +4420,23 @@ df_finance.head()
       <td>1328722794</td>
       <td>2015</td>
       <td>599.327786</td>
-      <td>Univ.</td>
+      <td>Uni.</td>
       <td>1165715774</td>
       <td>Furious 7 - 2015</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Jul 15, 2011</td>
-      <td>Harry Potter and the Deathly Hallows: Part II</td>
-      <td>125000000</td>
-      <td>381193157</td>
-      <td>1341693157</td>
-      <td>1216693157</td>
-      <td>2011</td>
-      <td>873.354526</td>
+      <td>May 4, 2012</td>
+      <td>The Avengers</td>
+      <td>225000000</td>
+      <td>623279547</td>
+      <td>1517935897</td>
+      <td>1292935897</td>
+      <td>2012</td>
+      <td>474.638176</td>
       <td>NaN</td>
-      <td>960500000</td>
-      <td>Harry Potter and the Deathly Hallows: Part II ...</td>
+      <td>894656350</td>
+      <td>The Avengers - 2012</td>
     </tr>
   </tbody>
 </table>
@@ -4391,7 +4455,7 @@ ax.set_title('Foreign Gross vs. Total Gross Profit', fontsize=25);
 ```
 
 
-![png](output_52_0.png)
+![png](output_55_0.png)
 
 
 
@@ -4405,7 +4469,7 @@ ax.set_title('Worldwide Gross vs. Total Gross Profit', fontsize=25);
 ```
 
 
-![png](output_53_0.png)
+![png](output_56_0.png)
 
 
 ## Macro Question #4: What percentage of movies released in theaters are successful?
@@ -4430,7 +4494,7 @@ ax.set_title('Movies that lost money (and were actually released)', fontsize=25)
 ```
 
 
-![png](output_55_0.png)
+![png](output_58_0.png)
 
 
 
@@ -4447,8 +4511,16 @@ print("Total number of movies that lost money: {}, ".format(df_gross_neg), "Perc
 
 ```
 
-    Total number of movies that lost money: 753,  Percent total that lost money: 40.27%
+    Total number of movies that lost money: 757,  Percent total that lost money: 39.8%
 
+
+### **Highlight:** 
+
+Many high earning movies did not break even.
+
+### **Recommendations:** 
+
+Learn from the mistakes made by movies with large production budgets and low ROI...or it could happen to you
 
 
 ```python
@@ -4522,7 +4594,7 @@ df_dom_loss.head()
       <td>2012</td>
       <td>-149.066667</td>
       <td>NaN</td>
-      <td>4583</td>
+      <td>0</td>
       <td>...</td>
       <td>Jan 13, 2012</td>
       <td>9000</td>
@@ -4532,7 +4604,7 @@ df_dom_loss.head()
       <td>2012</td>
       <td>-149.066667</td>
       <td>NaN</td>
-      <td>4583</td>
+      <td>0</td>
       <td>Newlyweds - 2012</td>
     </tr>
     <tr>
@@ -4546,7 +4618,7 @@ df_dom_loss.head()
       <td>2017</td>
       <td>-186.862963</td>
       <td>NaN</td>
-      <td>3546</td>
+      <td>0</td>
       <td>...</td>
       <td>Jan 27, 2017</td>
       <td>27000</td>
@@ -4556,7 +4628,7 @@ df_dom_loss.head()
       <td>2017</td>
       <td>-186.862963</td>
       <td>NaN</td>
-      <td>3546</td>
+      <td>0</td>
       <td>Emily - 2017</td>
     </tr>
     <tr>
@@ -4570,7 +4642,7 @@ df_dom_loss.head()
       <td>2011</td>
       <td>-190.920000</td>
       <td>NaN</td>
-      <td>3631</td>
+      <td>0</td>
       <td>...</td>
       <td>Feb 11, 2011</td>
       <td>40000</td>
@@ -4580,7 +4652,7 @@ df_dom_loss.head()
       <td>2011</td>
       <td>-190.920000</td>
       <td>NaN</td>
-      <td>3631</td>
+      <td>0</td>
       <td>Raymond Did It - 2011</td>
     </tr>
     <tr>
@@ -4594,7 +4666,7 @@ df_dom_loss.head()
       <td>2014</td>
       <td>-156.697143</td>
       <td>NaN</td>
-      <td>30311</td>
+      <td>0</td>
       <td>...</td>
       <td>Jul 25, 2014</td>
       <td>70000</td>
@@ -4604,7 +4676,7 @@ df_dom_loss.head()
       <td>2014</td>
       <td>-156.697143</td>
       <td>NaN</td>
-      <td>30311</td>
+      <td>0</td>
       <td>Happy Christmas - 2014</td>
     </tr>
     <tr>
@@ -4618,7 +4690,7 @@ df_dom_loss.head()
       <td>2014</td>
       <td>-140.576000</td>
       <td>NaN</td>
-      <td>59423</td>
+      <td>0</td>
       <td>...</td>
       <td>Mar 21, 2014</td>
       <td>100000</td>
@@ -4628,7 +4700,7 @@ df_dom_loss.head()
       <td>2014</td>
       <td>-140.576000</td>
       <td>NaN</td>
-      <td>59423</td>
+      <td>0</td>
       <td>Cheap Thrills - 2014</td>
     </tr>
   </tbody>
@@ -4654,7 +4726,7 @@ ax.set_title('Domestic *only* movies that lost money', fontsize=25);
 ```
 
 
-![png](output_58_0.png)
+![png](output_62_0.png)
 
 
 
@@ -4880,7 +4952,7 @@ ax.set_title('Foreign *only* movies that lost money', fontsize=25);
 ```
 
 
-![png](output_61_0.png)
+![png](output_65_0.png)
 
 
 
@@ -4966,7 +5038,7 @@ df_finance.head()
       <td>2018</td>
       <td>482.711400</td>
       <td>BV</td>
-      <td>2048134199</td>
+      <td>1369318718</td>
       <td>Avengers: Infinity War - 2018</td>
     </tr>
     <tr>
@@ -4980,7 +5052,7 @@ df_finance.head()
       <td>2015</td>
       <td>471.016739</td>
       <td>NaN</td>
-      <td>2053311219</td>
+      <td>1116648995</td>
       <td>Star Wars Ep. VII: The Force Awakens - 2015</td>
     </tr>
     <tr>
@@ -4994,7 +5066,7 @@ df_finance.head()
       <td>2015</td>
       <td>566.909239</td>
       <td>Uni.</td>
-      <td>1648854863</td>
+      <td>996584239</td>
       <td>Jurassic World - 2015</td>
     </tr>
     <tr>
@@ -5008,22 +5080,22 @@ df_finance.head()
       <td>2015</td>
       <td>599.327786</td>
       <td>Uni.</td>
-      <td>1518722793</td>
+      <td>1165715774</td>
       <td>Furious 7 - 2015</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Jul 15, 2011</td>
-      <td>Harry Potter and the Deathly Hallows: Part II</td>
-      <td>125000000</td>
-      <td>381193157</td>
-      <td>1341693157</td>
-      <td>1216693157</td>
-      <td>2011</td>
-      <td>873.354526</td>
+      <td>May 4, 2012</td>
+      <td>The Avengers</td>
+      <td>225000000</td>
+      <td>623279547</td>
+      <td>1517935897</td>
+      <td>1292935897</td>
+      <td>2012</td>
+      <td>474.638176</td>
       <td>NaN</td>
-      <td>1341693156</td>
-      <td>Harry Potter and the Deathly Hallows: Part II ...</td>
+      <td>894656350</td>
+      <td>The Avengers - 2012</td>
     </tr>
   </tbody>
 </table>
@@ -5046,20 +5118,30 @@ formatter = FuncFormatter(billions)
 sns.set(rc={'figure.figsize':(15,9)})
 
 
-x = df_finance['gross_profit_percent'][(df_finance['gross_profit_percent'] < 10000)]
+y = df_finance['gross_profit_percent'][(df_finance['gross_profit_percent'] < 10000)]
 
-y = df_finance['gross_profit'][(df_finance['gross_profit'] > 0) & df_finance['gross_profit'] < 30000000]
+x = df_finance['gross_profit'][(df_finance['gross_profit'] > 0) & df_finance['gross_profit'] < 30000000]
 
 ax = sns.scatterplot(x, y, data=df_finance)
 
-ax.yaxis.set_major_formatter(formatter)
-ax.set_xlabel('Return on Investment (%)', fontsize=20)
-ax.set_ylabel('Gross profit in $Billion (USD)', fontsize=20)
+ax.xaxis.set_major_formatter(formatter)
+ax.set_ylabel('Return on Investment (%)', fontsize=20)
+ax.set_xlabel('Gross profit in $Billion (USD)', fontsize=20)
 ax.set_title('Return on Investment compared against Total Gross Profit', fontsize=25);
 ```
 
 
-![png](output_65_0.png)
+![png](output_69_0.png)
+
+
+### **Highlight:** 
+
+In the last 10 years, movies released in theaters enjoyed 130% ROI on average.
+
+### **Recommendations:** 
+
+Continue with plan to enter into the movie business. 
+Caveat: data is based off of historical tickets sales (Pre-COVID 19)
 
 
 
@@ -5075,7 +5157,7 @@ df_finance['gross_profit'].corr(df_finance['gross_profit_percent'])
 
 
 
-    0.14209990507252498
+    0.14147501142906893
 
 
 
@@ -5089,12 +5171,12 @@ df_finance['gross_profit_percent'].describe()
 
 
 
-    count     1870.000000
-    mean       129.691909
-    std       1118.378304
+    count     1902.000000
+    mean       129.053949
+    std       1109.217495
     min       -200.000000
-    25%       -181.434207
-    50%        -40.287259
+    25%       -179.020890
+    50%        -37.206582
     75%        165.990676
     max      41456.474000
     Name: gross_profit_percent, dtype: float64
@@ -5110,7 +5192,7 @@ df_finance['gross_profit'].mean()
 
 
 
-    76356937.6593583
+    78825992.1661409
 
 
 
@@ -5124,7 +5206,7 @@ df_finance[null_columns].isnull().sum()
 
 
 
-    studio    828
+    studio    855
     dtype: int64
 
 
@@ -5132,7 +5214,7 @@ df_finance[null_columns].isnull().sum()
 # Phase 2: Micro-level questions
 
 
-## Micro Question #1: Which movies had the most return on investment in the last 10 years?
+## Micro Question #1: Which movies had the highest return on investment in the last 10 years?
 
 Answer: See plot below.
 
@@ -5189,7 +5271,7 @@ df_fin_20.head()
   </thead>
   <tbody>
     <tr>
-      <td>623</td>
+      <td>645</td>
       <td>Jul 10, 2015</td>
       <td>The Gallows</td>
       <td>100000</td>
@@ -5199,11 +5281,11 @@ df_fin_20.head()
       <td>2015</td>
       <td>41456.474000</td>
       <td>WB (NL)</td>
-      <td>41656473</td>
+      <td>18892064</td>
       <td>The Gallows - 2015</td>
     </tr>
     <tr>
-      <td>386</td>
+      <td>399</td>
       <td>Jan 6, 2012</td>
       <td>The Devil Inside</td>
       <td>1000000</td>
@@ -5213,11 +5295,11 @@ df_fin_20.head()
       <td>2012</td>
       <td>9975.949000</td>
       <td>Par.</td>
-      <td>101759489</td>
+      <td>48496545</td>
       <td>The Devil Inside - 2012</td>
     </tr>
     <tr>
-      <td>392</td>
+      <td>405</td>
       <td>Apr 1, 2011</td>
       <td>Insidious</td>
       <td>1500000</td>
@@ -5227,11 +5309,11 @@ df_fin_20.head()
       <td>2011</td>
       <td>6458.059067</td>
       <td>FD</td>
-      <td>99870885</td>
+      <td>45861736</td>
       <td>Insidious - 2011</td>
     </tr>
     <tr>
-      <td>505</td>
+      <td>523</td>
       <td>Apr 17, 2015</td>
       <td>Unfriended</td>
       <td>1000000</td>
@@ -5241,11 +5323,11 @@ df_fin_20.head()
       <td>2015</td>
       <td>6236.419800</td>
       <td>Uni.</td>
-      <td>64364197</td>
+      <td>31574553</td>
       <td>Unfriended - 2015</td>
     </tr>
     <tr>
-      <td>162</td>
+      <td>170</td>
       <td>Jan 20, 2017</td>
       <td>Split</td>
       <td>5000000</td>
@@ -5255,7 +5337,7 @@ df_fin_20.head()
       <td>2017</td>
       <td>5379.296120</td>
       <td>Uni.</td>
-      <td>278964805</td>
+      <td>140823221</td>
       <td>Split - 2017</td>
     </tr>
   </tbody>
@@ -5322,7 +5404,7 @@ df_fin_20.head()
       <td>2015</td>
       <td>41456.474000</td>
       <td>WB (NL)</td>
-      <td>41656473</td>
+      <td>18892064</td>
       <td>The Gallows - 2015</td>
     </tr>
     <tr>
@@ -5336,7 +5418,7 @@ df_fin_20.head()
       <td>2012</td>
       <td>9975.949000</td>
       <td>Par.</td>
-      <td>101759489</td>
+      <td>48496545</td>
       <td>The Devil Inside - 2012</td>
     </tr>
     <tr>
@@ -5350,7 +5432,7 @@ df_fin_20.head()
       <td>2011</td>
       <td>6458.059067</td>
       <td>FD</td>
-      <td>99870885</td>
+      <td>45861736</td>
       <td>Insidious - 2011</td>
     </tr>
     <tr>
@@ -5364,7 +5446,7 @@ df_fin_20.head()
       <td>2015</td>
       <td>6236.419800</td>
       <td>Uni.</td>
-      <td>64364197</td>
+      <td>31574553</td>
       <td>Unfriended - 2015</td>
     </tr>
     <tr>
@@ -5378,7 +5460,7 @@ df_fin_20.head()
       <td>2017</td>
       <td>5379.296120</td>
       <td>Uni.</td>
-      <td>278964805</td>
+      <td>140823221</td>
       <td>Split - 2017</td>
     </tr>
   </tbody>
@@ -5466,7 +5548,7 @@ df_fin_20.head()
       <td>2015</td>
       <td>41456.474000</td>
       <td>WB (NL)</td>
-      <td>41656473</td>
+      <td>18892064</td>
       <td>The Gallows - 2015</td>
     </tr>
     <tr>
@@ -5480,7 +5562,7 @@ df_fin_20.head()
       <td>2012</td>
       <td>9975.949000</td>
       <td>Par.</td>
-      <td>101759489</td>
+      <td>48496545</td>
       <td>The Devil Inside - 2012</td>
     </tr>
     <tr>
@@ -5494,7 +5576,7 @@ df_fin_20.head()
       <td>2011</td>
       <td>6458.059067</td>
       <td>FD</td>
-      <td>99870885</td>
+      <td>45861736</td>
       <td>Insidious - 2011</td>
     </tr>
     <tr>
@@ -5508,7 +5590,7 @@ df_fin_20.head()
       <td>2015</td>
       <td>6236.419800</td>
       <td>Uni.</td>
-      <td>64364197</td>
+      <td>31574553</td>
       <td>Unfriended - 2015</td>
     </tr>
     <tr>
@@ -5522,7 +5604,7 @@ df_fin_20.head()
       <td>2017</td>
       <td>5379.296120</td>
       <td>Uni.</td>
-      <td>278964805</td>
+      <td>140823221</td>
       <td>Split - 2017</td>
     </tr>
   </tbody>
@@ -5578,8 +5660,18 @@ ax.set_title('Top 20 Highest ROI Movies (2010-2020)', fontsize=18);
 show_values_on_bars(ax, "h", 0.3)
 ```
 
+    /Users/andrewhotchkiss/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 128 missing from current font.
+      font.set_text(s, 0.0, flags=flags)
+    /Users/andrewhotchkiss/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 153 missing from current font.
+      font.set_text(s, 0.0, flags=flags)
+    /Users/andrewhotchkiss/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:180: RuntimeWarning: Glyph 128 missing from current font.
+      font.set_text(s, 0, flags=flags)
+    /Users/andrewhotchkiss/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:180: RuntimeWarning: Glyph 153 missing from current font.
+      font.set_text(s, 0, flags=flags)
 
-![png](output_80_0.png)
+
+
+![png](output_85_1.png)
 
 
 
@@ -5635,7 +5727,7 @@ df_finance.head()
       <td>2018</td>
       <td>482.711400</td>
       <td>BV</td>
-      <td>2048134199</td>
+      <td>1369318718</td>
       <td>Avengers: Infinity War - 2018</td>
     </tr>
     <tr>
@@ -5649,7 +5741,7 @@ df_finance.head()
       <td>2015</td>
       <td>471.016739</td>
       <td>NaN</td>
-      <td>2053311219</td>
+      <td>1116648995</td>
       <td>Star Wars Ep. VII: The Force Awakens - 2015</td>
     </tr>
     <tr>
@@ -5663,7 +5755,7 @@ df_finance.head()
       <td>2015</td>
       <td>566.909239</td>
       <td>Uni.</td>
-      <td>1648854863</td>
+      <td>996584239</td>
       <td>Jurassic World - 2015</td>
     </tr>
     <tr>
@@ -5677,22 +5769,22 @@ df_finance.head()
       <td>2015</td>
       <td>599.327786</td>
       <td>Uni.</td>
-      <td>1518722793</td>
+      <td>1165715774</td>
       <td>Furious 7 - 2015</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Jul 15, 2011</td>
-      <td>Harry Potter and the Deathly Hallows: Part II</td>
-      <td>125000000</td>
-      <td>381193157</td>
-      <td>1341693157</td>
-      <td>1216693157</td>
-      <td>2011</td>
-      <td>873.354526</td>
+      <td>May 4, 2012</td>
+      <td>The Avengers</td>
+      <td>225000000</td>
+      <td>623279547</td>
+      <td>1517935897</td>
+      <td>1292935897</td>
+      <td>2012</td>
+      <td>474.638176</td>
       <td>NaN</td>
-      <td>1341693156</td>
-      <td>Harry Potter and the Deathly Hallows: Part II ...</td>
+      <td>894656350</td>
+      <td>The Avengers - 2012</td>
     </tr>
   </tbody>
 </table>
@@ -5855,7 +5947,7 @@ df_test_2.head()
       <td>2018</td>
       <td>482.711400</td>
       <td>Disney</td>
-      <td>2048134199</td>
+      <td>1369318718</td>
       <td>Avengers: Infinity War - 2018</td>
       <td>BV</td>
       <td>678800000.0</td>
@@ -5873,7 +5965,7 @@ df_test_2.head()
       <td>2015</td>
       <td>566.909239</td>
       <td>Univ.</td>
-      <td>1648854863</td>
+      <td>996584239</td>
       <td>Jurassic World - 2015</td>
       <td>Uni.</td>
       <td>652300000.0</td>
@@ -5891,7 +5983,7 @@ df_test_2.head()
       <td>2015</td>
       <td>599.327786</td>
       <td>Univ.</td>
-      <td>1518722793</td>
+      <td>1165715774</td>
       <td>Furious 7 - 2015</td>
       <td>Uni.</td>
       <td>353000000.0</td>
@@ -5909,7 +6001,7 @@ df_test_2.head()
       <td>2018</td>
       <td>474.129112</td>
       <td>Disney</td>
-      <td>1348258223</td>
+      <td>648198658</td>
       <td>Black Panther - 2018</td>
       <td>BV</td>
       <td>700100000.0</td>
@@ -5927,7 +6019,7 @@ df_test_2.head()
       <td>2018</td>
       <td>568.101646</td>
       <td>Univ.</td>
-      <td>1305772798</td>
+      <td>888053039</td>
       <td>Jurassic World: Fallen Kingdom - 2018</td>
       <td>Uni.</td>
       <td>417700000.0</td>
@@ -5962,7 +6054,7 @@ df_test_2.isnull().sum()
     year_movie_released       0
     studio_y                  1
     domestic_gross            1
-    foreign_gross_y         152
+    foreign_gross_y         153
     year                      0
     dtype: int64
 
@@ -5987,7 +6079,9 @@ studio_20 = df_test_2['studio_x'][:150]
 
 sns.set(rc={'figure.figsize':(15,9)})
 
-ax = sns.swarmplot(x=studio_20, y='worldwide_gross', data=df_test_2, size=8)
+ax = sns.swarmplot(x=studio_20, y='worldwide_gross', data=df_test_2, size=8, edgecolor='black', linewidth=1) #Add edge colors to markers
+ax = sns.barplot(x=studio_20, y='worldwide_gross', data=df_test_2)
+
 
 ax.yaxis.set_major_formatter(formatter)
 ax.set_xlabel('Company', fontsize=20)
@@ -5996,7 +6090,17 @@ ax.set_title("Highest Grossing Production Companies (2010-2020)", fontsize=25);
 ```
 
 
-![png](output_88_0.png)
+![png](output_93_0.png)
+
+
+### **Highlight:** 
+
+Disney, Universal, WBros, and Dreamworks are the top performers
+
+### **Recommendations:** 
+
+Consider Joint Venture to share production / distribution costs (common industry practice). 
+Recruit talent with experience at these companies
 
 
 ## Micro Question #3: Which production company had the highest ROI? 
@@ -6233,7 +6337,7 @@ df_test_3
       <td>2018</td>
       <td>482.711400</td>
       <td>Disney</td>
-      <td>2048134199</td>
+      <td>1369318718</td>
       <td>...</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6257,7 +6361,7 @@ df_test_3
       <td>2015</td>
       <td>566.909239</td>
       <td>Univ.</td>
-      <td>1648854863</td>
+      <td>996584239</td>
       <td>...</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6281,7 +6385,7 @@ df_test_3
       <td>2015</td>
       <td>599.327786</td>
       <td>Univ.</td>
-      <td>1518722793</td>
+      <td>1165715774</td>
       <td>...</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6305,7 +6409,7 @@ df_test_3
       <td>2018</td>
       <td>474.129112</td>
       <td>Disney</td>
-      <td>1348258223</td>
+      <td>648198658</td>
       <td>...</td>
       <td>PG</td>
       <td>Animation|Comedy|Kids and Family</td>
@@ -6329,7 +6433,7 @@ df_test_3
       <td>2018</td>
       <td>568.101646</td>
       <td>Univ.</td>
-      <td>1305772798</td>
+      <td>888053039</td>
       <td>...</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6367,7 +6471,7 @@ df_test_3
       <td>...</td>
     </tr>
     <tr>
-      <td>1106</td>
+      <td>1111</td>
       <td>Nov 1, 2013</td>
       <td>Mr. Nobody</td>
       <td>46500000</td>
@@ -6377,7 +6481,7 @@ df_test_3
       <td>2013</td>
       <td>-199.952142</td>
       <td>Magn.</td>
-      <td>22253</td>
+      <td>18632</td>
       <td>...</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6391,7 +6495,7 @@ df_test_3
       <td>NaN</td>
     </tr>
     <tr>
-      <td>1107</td>
+      <td>1112</td>
       <td>Jan 16, 2015</td>
       <td>Blackhat</td>
       <td>70000000</td>
@@ -6401,7 +6505,7 @@ df_test_3
       <td>2015</td>
       <td>-171.907137</td>
       <td>Univ.</td>
-      <td>19665003</td>
+      <td>11659024</td>
       <td>...</td>
       <td>PG-13</td>
       <td>Drama</td>
@@ -6415,7 +6519,7 @@ df_test_3
       <td>Sony Pictures Classics</td>
     </tr>
     <tr>
-      <td>1108</td>
+      <td>1113</td>
       <td>Jul 19, 2013</td>
       <td>R.I.P.D.</td>
       <td>130000000</td>
@@ -6425,7 +6529,7 @@ df_test_3
       <td>2013</td>
       <td>-139.171786</td>
       <td>Univ.</td>
-      <td>79076677</td>
+      <td>45457823</td>
       <td>...</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6439,7 +6543,7 @@ df_test_3
       <td>NaN</td>
     </tr>
     <tr>
-      <td>1109</td>
+      <td>1114</td>
       <td>Jan 13, 2017</td>
       <td>Monster Trucks</td>
       <td>125000000</td>
@@ -6449,7 +6553,7 @@ df_test_3
       <td>2017</td>
       <td>-150.685762</td>
       <td>Paramount</td>
-      <td>61642797</td>
+      <td>28272632</td>
       <td>...</td>
       <td>NR</td>
       <td>Drama</td>
@@ -6463,7 +6567,7 @@ df_test_3
       <td>NaN</td>
     </tr>
     <tr>
-      <td>1110</td>
+      <td>1115</td>
       <td>Mar 11, 2011</td>
       <td>Mars Needs Moms</td>
       <td>150000000</td>
@@ -6473,7 +6577,7 @@ df_test_3
       <td>2011</td>
       <td>-173.633495</td>
       <td>Disney</td>
-      <td>39549757</td>
+      <td>18157000</td>
       <td>...</td>
       <td>PG</td>
       <td>Action and Adventure|Animation|Comedy|Science ...</td>
@@ -6488,7 +6592,7 @@ df_test_3
     </tr>
   </tbody>
 </table>
-<p>1111 rows × 27 columns</p>
+<p>1116 rows × 27 columns</p>
 </div>
 
 
@@ -6520,7 +6624,10 @@ formatter = FuncFormatter(billions)
 #PLOT PARENTAL GUIDANCE RATINGS RELATED TO EARNINGS
 sns.set(rc={'figure.figsize':(15,9)})
 
-ax = sns.swarmplot(x='rating', y='gross_profit', hue='rating', data=df_test_3, size=8)
+ax = sns.swarmplot(x='rating', y='gross_profit', hue='rating', data=df_test_3, linewidth=1, 
+                   edgecolor='black', size=8)
+ax = sns.boxplot(x='rating', y='gross_profit', data=df_test_3, whis=np.inf)
+
 
 ax.yaxis.set_major_formatter(formatter)
 ax.set_xlabel('Ratings', fontsize=20)
@@ -6529,8 +6636,16 @@ ax.set_title("Revenue by Ratings (2010-2020)", fontsize=25);
 ```
 
 
-![png](output_97_0.png)
+![png](output_103_0.png)
 
+
+### **Highlight:** 
+
+PG and PG-13 movies achieved the most revenue.
+
+### **Recommendations:** 
+
+Subject-matter/topic for first movie should be suitable for PG/PG-13 audiences
 
 
 ```python
@@ -6564,7 +6679,7 @@ df_test_3['worldwide_gross'].loc[df_test_3['rating'] == 'R'].mean()
 
 
 
-    127347248.85858586
+    127391348.5276382
 
 
 
@@ -6580,12 +6695,37 @@ df_test_3['worldwide_gross'].loc[df_test_3['rating'] == 'NR'].mean()
 
 
 
+# Conclusion
+
+### **Recommendations:**
+- Look at establishing a franchise
+- Plan out sequels
+- Stick to PG or PG-13 rated movies
+- Explore a joint venture with Disney, Universal, Warner Brother, or Dreamworks
+- Hire talent from the above companies
+
+### **Opportunities for future research:**
+- Conduct a deeper dive into the most successful producers, directors, and writers
+- Analyze the most successful recurring movie genres
+- Determine the best month/season to release a movie
+
+
+
 # MOD 1 Project Cut line...everything below here is notes
 
 
 ```python
 pip install tmdbsimple
 ```
+
+    Requirement already satisfied: tmdbsimple in /Users/andrewhotchkiss/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages (2.2.11)
+    Requirement already satisfied: requests in /Users/andrewhotchkiss/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages (from tmdbsimple) (2.22.0)
+    Requirement already satisfied: idna<2.9,>=2.5 in /Users/andrewhotchkiss/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages (from requests->tmdbsimple) (2.8)
+    Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /Users/andrewhotchkiss/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages (from requests->tmdbsimple) (1.24.2)
+    Requirement already satisfied: certifi>=2017.4.17 in /Users/andrewhotchkiss/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages (from requests->tmdbsimple) (2020.4.5.1)
+    Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /Users/andrewhotchkiss/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages (from requests->tmdbsimple) (3.0.4)
+    Note: you may need to restart the kernel to use updated packages.
+
 
 
 ```python
@@ -6625,9 +6765,27 @@ display(movie.title, movie.production_companies[0])#USE INDEX VALUE BY REFERENCI
 ```
 
 
+    'The Matrix'
+
+
+
+    {'id': 79,
+     'logo_path': '/tpFpsqbleCzEE2p5EgvUq6ozfCA.png',
+     'name': 'Village Roadshow Pictures',
+     'origin_country': 'US'}
+
+
+
 ```python
 type(movie.title)
 ```
+
+
+
+
+    str
+
+
 
 
 ```python
@@ -6636,6 +6794,10 @@ for c in movie.countries:
     if c['iso_3166_1'] == 'US':
         print(c['certification'])
 ```
+
+    
+    R
+
 
 
 ```python
@@ -6649,6 +6811,54 @@ for s in search.results:
     print(s['title'], s['id'])
                                                         
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    HTTPError                                 Traceback (most recent call last)
+
+    <ipython-input-395-ef187e7620f9> in <module>
+          3 
+          4 search = tmdb.Search()
+    ----> 5 response = search.movie(query=list_1)
+          6 
+          7 for s in search.results:
+
+
+    ~/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/tmdbsimple/search.py in movie(self, **kwargs)
+         57         path = self._get_path('movie')
+         58 
+    ---> 59         response = self._GET(path, kwargs)
+         60         self._set_attrs_to_values(response)
+         61         return response
+
+
+    ~/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/tmdbsimple/base.py in _GET(self, path, params)
+         87 
+         88     def _GET(self, path, params=None):
+    ---> 89         return self._request('GET', path, params=params)
+         90 
+         91     def _POST(self, path, params=None, payload=None):
+
+
+    ~/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/tmdbsimple/base.py in _request(self, method, path, params, payload)
+         82             headers=self.headers)
+         83 
+    ---> 84         response.raise_for_status()
+         85         response.encoding = 'utf-8'
+         86         return response.json()
+
+
+    ~/opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/requests/models.py in raise_for_status(self)
+        938 
+        939         if http_error_msg:
+    --> 940             raise HTTPError(http_error_msg, response=self)
+        941 
+        942     def close(self):
+
+
+    HTTPError: 422 Client Error: Unknown for url: https://api.themoviedb.org/3/search/movie?api_key=0a817a4662848b414e9f6ff300ad78c2
+
 
 
 ```python
